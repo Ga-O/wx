@@ -1,0 +1,28 @@
+/* pages/scence/scence.wxss */
+page{
+   background:#f5f9fc;
+}
+/*2:卡片*/
+.card{
+  background-color: #fff;
+  border:1px solid #ddd;
+  border-radius: 20rpx;
+  margin:60rpx 20rpx;
+  padding:30rpx;
+  display: flex;         /*设置弹性布局，按列排放*/
+  flex-direction: column;
+}
+/* 卡片轮播图 */
+.card-slider,.card-slider image{
+  width:100%;
+  height:460rpx;
+}
+.card-title{
+  margin:20rpx 0rpx;
+  font-size:15px;
+}
+.card-desc{
+  font-size:12px;
+  color:#696969;
+  line-height:40rpx;
+}

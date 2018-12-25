@@ -1,0 +1,39 @@
+<!--pages/wxdels/wxdels.wxml-->
+<view class="app-wzdels">
+  <!-- 轮播图 -->
+  <view class="delslider">
+    <swiper autoplay  indicator-dots  indicator-active-color="#fff" circular>
+      <swiper-item wx:for="{{delslist}}" wx:key="index">
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 菜单 -->
+  <view>
+    <view class="navitem">
+      <view class="navtitle {{activeIndex==index? 'active':''}}" wx:for="{{navitem}}" wx:key="index" bindtap="handle1" data-idx="{{index}}" data-title="{{item.title}}">{{item.title}}</view>
+    </view>
+    <view style="display:{{activeIndex==0?'block':'none'}}" class="nava">
+      <text decode>乌镇，位于浙江省嘉兴市桐乡，地处江浙沪“金三角”之地、杭嘉湖平原腹地，距杭州、苏州均为60公里，距上海106公里。属太湖流域水系，河流纵横交织，京杭大运河依镇而过。乌镇原以市河为界，分为乌青二镇，河西为乌镇，属湖州府乌程县；河东为青镇，属嘉兴府桐乡县。解放后，市河以西的乌镇划归桐乡县，才统称乌镇。乌镇是首批中国历史文化名镇、中国十大魅力名镇、全国环境优美乡镇、国家5A级旅游景区，素有“中国最后的枕水人家”之誉，拥有7000多年文明史和1300年建镇史，是典型的中国江南水乡古镇，有“鱼米之乡、丝绸之府”之称。有六千年历史，是全国二十个黄金周预报景点及江南六大古镇之一。</text>
+    <scroll-view scroll-y class="scroll-img" scroll-top="10">
+      <image wx:for="{{scrollImg}}" wx:key="index" src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+    </scroll-view>
+    </view>
+    <view style="display:{{activeIndex==1?'block':'none'}}" class="navb" >
+      <map id="map" longitude="120.54" latitude="30.64"  markers="{{markers}}"></map>
+    </view>
+    <view style="display:{{activeIndex==2?'block':'none'}}" class="navc">
+      <form bindsubmit='checkForm'>
+        <input type="text" placeholder='姓名' name="uname"></input>
+        <input type="text" placeholder='联系方式' name="uphone"></input>
+        <button formType="submit" class="navsub">提交</button> 
+      </form>
+    </view>
+    <view style="display:{{activeIndex==3?'block':'none'}}" class="navd">
+      <form bindsubmit="checkForm2">
+        <textarea value="您的建议"></textarea>
+        <button formType="submit" class="navsub">提交</button>
+      </form>
+    </view>
+  </view>
+</view>

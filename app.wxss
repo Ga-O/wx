@@ -1,0 +1,49 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+/*通用功能一：截取长字符串*/
+.ell{
+  overflow:hidden;/*超过范围隐藏*/
+  white-space:nowrap;/**不允许换行*/
+  text-overflow:ellipsis;/**超出部分添加。。。*/
+}
+/*通用功能二：灰色分隔块*/
+.divider{
+  height:30rpx;
+  background-color:#f1f1f1;
+}
+/*通用功能3 项目条*/
+.cell{
+  background:#fff;
+  font-size:16px
+}
+.cell-item{
+  padding:20rpx 30rpx;
+  border-bottom:1rpx solid #ddd;
+}
+/*通用箭头*/
+.arrow{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow::after{
+  content:"";
+  width:15rpx;
+  height:15rpx;
+  border-top:3rpx solid #ccc;
+  border-right:3rpx solid #ccc;
+  transform:rotate(45deg);/*旋转45度*/
+}
+/* 下边狂 */
+view.active{
+  border-bottom:2px solid #FF6600;
+  color:#FF6600;
+}

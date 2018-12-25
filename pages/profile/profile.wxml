@@ -1,0 +1,75 @@
+<!--pages/profile/profile.wxml-->
+<view>
+<!-- 个人头像 -->
+  <view class="avatar">
+    <!-- <image src="" lazy-load="true" mode="aspectFill">
+    </image> -->
+    <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/loca.png" lazy-load="true" mode="aspectFill"></image>
+        我的地址
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/menu.png" lazy-load="true" mode="aspectFill"></image>
+        我的订单
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/shopcar.png" lazy-load="true" mode="aspectFill"></image>
+        购物车
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/mes.png" lazy-load="true" mode="aspectFill"></image>
+        系统通知
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/vip.png" lazy-load="true" mode="aspectFill"></image>
+        会员卡
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/chance.png" lazy-load="true" mode="aspectFill"></image>
+        优惠卷
+      </view>
+    </view>
+    <view class="cell-item arrow">
+      <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/score.png" lazy-load="true" mode="aspectFill"></image>
+        积分
+      </view>
+    </view>
+  </view>
+<!-- 设置 -->
+  <view class="divider"></view>
+    <view class="cell">
+      <view class="cell-item arrow">
+        <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/tell.png" lazy-load="true" mode="aspectFill"></image>
+        联系我们
+      </view>
+      </view>
+      <view class="cell-item arrow">
+        <view class="cell-left">
+        <image class="c-img" src="/pages/img/icon/part.png" lazy-load="true" mode="aspectFill"></image>
+        加入我们
+      </view>
+      </view>
+  </view>
+</view>

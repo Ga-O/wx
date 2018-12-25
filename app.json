@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/wzdels/wzdels",
+    "pages/logs/logs",
+    "pages/profile/profile",
+    "pages/hotal/hotal",
+    "pages/scence/scence",
+    "pages/commend/commend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#008AF1",
+    "navigationBarTitleText": "乌镇旅游民宿",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#FF6600",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/img/tab/tab01.png",
+        "selectedIconPath": "pages/img/tab/taba01.png"
+      },
+      {
+        "pagePath": "pages/scence/scence",
+        "text": "景点",
+        "iconPath": "pages/img/tab/tab02.png",
+        "selectedIconPath": "pages/img/tab/taba02.png"
+      },
+      {
+        "pagePath": "pages/hotal/hotal",
+        "text": "民宿",
+        "iconPath": "pages/img/tab/tab03.png",
+        "selectedIconPath": "pages/img/tab/taba03.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "pages/img/tab/tab04.png",
+        "selectedIconPath": "pages/img/tab/taba04.png"
+      }
+    ]
+  }
+}

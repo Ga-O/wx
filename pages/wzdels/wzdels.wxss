@@ -1,0 +1,75 @@
+/* pages/wxdels/wxdels.wxss */
+/* 背景色 */
+page{
+  background:#f5f9fc;
+}
+
+/* 轮播图 */
+.delslider,.delslider swiper,.delslider image{
+  width:100%;
+  height:350rpx;
+}
+/*选项卡**/
+.navitem{
+  height:80rpx;
+  display:flex;
+  flex-direction:wrap;
+  background:#fff;
+}
+.navtitle{
+  width:25%;
+  font-size:15px;
+  height:100%;
+  line-height: 80rpx;
+  text-align:center;
+  color:#696969;
+  
+}
+
+.nava{
+  padding:30rpx;
+}
+.nava text{
+  font-size:14px;
+  color:#393939;
+}
+.navb map{ 
+  width:100%;
+  height:400rpx;
+  
+}
+.navc input,.navsub{
+  margin:0 auto;
+  border:1px solid #ccc;
+  margin-top:40rpx;
+  width:80%;
+  height:70rpx;
+  font-size:15px;
+  padding-left:20rpx
+}
+.navc .navsub{
+  border:0;
+}
+.navsub{
+  background:#ff6600;
+  width:83%;
+  border-radius:0;
+  padding:0;
+  height:70rpx;
+  color:#fff;
+  border:0;
+}
+
+.navd textarea{
+  width:80%;
+  min-height:350rpx;
+  border:1px solid #ccc;
+  font-size:14px;
+  color:#696969;
+  margin:0 auto;
+  margin-top:40rpx; 
+}
+/* 滚动条 */
+.scroll-img{
+  height:600rpx;
+}

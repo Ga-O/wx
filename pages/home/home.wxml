@@ -1,0 +1,53 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view class="top">     
+    <text decode="true">客官，您好！</text>
+    <navigator class="wzdels" url="/pages/wzdels/wzdels" hover-class='none'>了解“乌镇”></navigator>
+  </view>
+  <!-- 轮播图 -->
+  <view class="slider">
+    <swiper autoplay  indicator-dots  indicator-active-color="#fff" circular>
+      <swiper-item wx:for="{{sliderlist}}" wx:key="index">
+        <image src="{{item.img_url}}" lazy-load="true" mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航栏 -->
+  <view class="nav">
+    <view wx:for="{{navlist}}" wx:key="index" class="navlist" >
+      <view class="navitem" hover-class='none'>
+        <image src="{{item.img_url}}" lazy-load catchtap='navhandle' data-hname="{{item.name}}"></image>
+      </view>
+      <text class="navname" bindtap='navhandle' data-hname="{{item.name}}">{{item.name}}</text>
+    </view>
+  </view>
+  <!-- 分隔块1 -->
+  <view class="divder">
+    <image src="/pages/img/tab/wzlogo.png" lazy-load></image>
+    <text class="dtitle">热门酒店民宿</text>
+  </view>
+  <!-- 推荐 -->
+  <view class="rhotal">
+    <view class="hotallist" wx:for="{{hotallist}}" wx:key="index">
+      <navigator url="" hover-class='none'>
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+        <text class="hotalname">{{item.name}}</text>
+        <view>
+          <text class="hotalprice">￥:{{item.price}}</text>
+          <text class="hotalcount">销量：{{item.count}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 分隔块 -->
+  <view class="divder">
+    <image src="/pages/img/tab/wzlogo.png"></image>
+    <text class="dtitle">推荐商家</text>
+  </view>
+  <!-- 定位 -->
+  <view class="bolocation">
+    <image src="/pages/img/tab/location.png" mode="aspectFill"></image>
+    <view class="nearlocation ell" catchtap='locationMap'>{{name}}</view>
+    <view class="nearshop">附近商家</view>
+  </view>
+</view>

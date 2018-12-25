@@ -1,0 +1,13 @@
+<!--pages/scence/scence.wxml-->
+<view>
+  <view class="card" wx:for="{{all}}" wx:for-item="carditem" wx:for-index="cardidx" wx:key="cardidx">
+   <swiper class="card-slider" autoplay  indicator-dots  indicator-active-color="#fff" circular>
+    <swiper-item wx:for="{{carditem.child}}" wx:key="index" >
+      <image src="{{item.img_url}}" lazy-load="true" mode="aspectFill"></image>
+    </swiper-item>
+   </swiper>
+   <text class="card-title">{{carditem.title}}</text>
+   <text class="card-desc">{{carditem.details}}</text>
+</view>
+
+</view>

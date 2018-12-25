@@ -1,0 +1,51 @@
+<!--pages/hotal/hotal.wxml-->
+<view>
+<!-- 顶部搜索栏 -->
+  <view class="top-search">
+    <view class="place">
+      <image src="/pages/img/tab/location.png" mode="aspectFill"></image>
+      <view class="sell" catchtap='locationMap'>{{city}}</view>
+    </view>
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input class="" placeholder="请输入关键字" value="{{searchValue}}"/>
+    </view>
+    <view class='sousuo'>搜索</view>
+  </view>
+  <!-- 菜单 -->
+  <view class="hotalitem">
+    <view class="{{activeidx==index?'active':''}}" wx:for="{{list}}" wx:key="index" catchtap='hothandle' data-idx="{{index}}">{{item.title}}</view>  
+  </view>
+  <view class="rhotal">
+    <view class="hotallist" style="display:{{activeidx==0?'block':'none'}}" wx:for="{{hotallist}}" wx:key="index">
+      <navigator url="" hover-class='none'>
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+        <text class="hotalname">{{item.name}}</text>
+        <view>
+          <text class="hotalprice">￥:{{item.price}}</text>
+          <text class="hotalcount">销量：{{item.count}}</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="hotallist" style="display:{{activeidx==1?'block':'none'}}" wx:for="{{hothouse}}" wx:key="index">
+      <navigator url="" hover-class='none'>
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+        <text class="hotalname">{{item.name}}</text>
+        <view>
+          <text class="hotalprice">￥:{{item.price}}</text>
+          <text class="hotalcount">销量：{{item.count}}</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="hotallist" style="display:{{activeidx==2?'block':'none'}}" wx:for="{{hotallist}}" wx:key="index">
+      <navigator url="" hover-class='none'>
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+        <text class="hotalname">{{item.name}}</text>
+        <view>
+          <text class="hotalprice">￥:{{item.price}}</text>
+          <text class="hotalcount">销量：{{item.count}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

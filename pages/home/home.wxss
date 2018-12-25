@@ -1,0 +1,103 @@
+/* pages/home/home.wxss */
+.top{
+  font-size:14px;
+  padding:20rpx 16rpx;
+}
+.wzdels{
+  float: right;
+}
+/*轮播图*/
+.slider,.slider swiper,.slider image{
+  width:100%;
+  height:350rpx;
+}
+/*导航*/
+.nav{
+  height:150rpx;
+  padding:30rpx;
+  display:flex;
+  justify-content: space-around;
+}
+.navitem image{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50rpx;
+}
+.navname{
+  font-size:12px;
+  display:block;
+}
+/* 分隔块 */
+.divder{
+  height:100rpx;
+  background-color:#D6DDE7;
+  line-height:100rpx;
+}
+.divder image{
+  width:45rpx;
+  height:80rpx;
+  float:left;
+  margin-top:10rpx;
+  margin-left:20rpx;
+}
+.dtitle{
+  width:230rpx;
+  display:block;
+  font-weight:bold;
+  margin:0 auto;
+  text-align:center;
+}
+/* 推荐 */
+.rhotal{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom:40rpx;
+}
+.hotallist{
+  width:40%;
+  /* border:1px solid red; */
+  margin-top:40rpx;
+}
+.hotallist image{
+ width:100%;
+ height:300rpx;
+  
+}
+.hotalname{
+  color:#696969;
+  font-size:15px;
+}
+.hotalprice{
+  color:#FF6600;
+  font-size:14px;
+}
+.hotalcount{
+  color:#aaa;
+  font-size:14px;
+  margin-top:10rpx;
+  margin-left:20rpx;
+}
+/* 定位 */
+.bolocation{
+  height:80rpx;
+  line-height: 80rpx;
+}
+.bolocation image{
+  margin-top:20rpx;
+  width:40rpx;
+  height:40rpx;
+  float:left;
+
+}
+.nearlocation{
+  float:left;
+  font-size:14px;
+  width:300rpx;
+  color:#696969;
+}
+.nearshop{
+  float:right;
+  font-size:14px;
+  color:#696969;
+}
