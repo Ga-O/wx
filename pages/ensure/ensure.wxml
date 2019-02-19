@@ -1,0 +1,36 @@
+<!--pages/ensure/ensure.wxml-->
+<view class="app-ensure">
+  <form>
+    <view class="sertime">
+      <view>服务时长</view>
+      <view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">{{array[index]}}天</view>
+        </picker>
+      </view>
+    </view>
+    <view class="serprice">
+      <view>价格</view>
+      <view>{{serprice}}元</view>
+    </view>
+    <view class="sum">
+      <view>共计</view>
+      <view>{{sum}}元</view>
+    </view>
+    <scroll-view class='choose' scroll-x='true'>
+      <view class="choosedate">
+        <view wx:for="{{arr}}" wx:key="index" bindtap="changebg" data-changeidx="{{index}}" class="chooseview {{changeidx==index?'viewactive':''}}">
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+    <view class="choosetime">
+      <view>0:00-24:00</view>
+    </view>
+    <button class="subbtn" bindtap="subchoose">确认</button>
+  </form>
+  <modal wx:if="{{subnum==1}}" style="display:{{hiddenmodalput?'none':'block'}}" title="完善资料" confirm-text="提交" cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM">
+      <input bindinput='iName' type='text' name="uname" placeholder="请输入姓名..." auto-focus/>
+      <input bindinput='iPhoneNum' type='number' name="uphone" placeholder="请输入手机号码..." />
+  </modal>
+</view>

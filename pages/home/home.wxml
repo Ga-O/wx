@@ -14,11 +14,11 @@
   </view>
   <!-- 导航栏 -->
   <view class="nav">
-    <view wx:for="{{navlist}}" wx:key="index" class="navlist" >
+    <view wx:for="{{navlist}}" wx:key="index" class="navlist" bindtap='navhandle' data-hname="{{item.name}}" data-idx1="{{index}}">
       <view class="navitem" hover-class='none'>
-        <image src="{{item.img_url}}" lazy-load catchtap='navhandle' data-hname="{{item.name}}"></image>
+        <image src="{{item.img_url}}" lazy-load ></image>
       </view>
-      <text class="navname" bindtap='navhandle' data-hname="{{item.name}}">{{item.name}}</text>
+      <text class="navname">{{item.name}}</text>
     </view>
   </view>
   <!-- 分隔块1 -->
@@ -28,15 +28,13 @@
   </view>
   <!-- 推荐 -->
   <view class="rhotal">
-    <view class="hotallist" wx:for="{{hotallist}}" wx:key="index">
-      <navigator url="" hover-class='none'>
+    <view class="hotallist" wx:for="{{hotallist}}" wx:key="index" bindtap='hothandle' data-hotalidx2="{{index}}">
         <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
         <text class="hotalname">{{item.name}}</text>
         <view>
           <text class="hotalprice">￥:{{item.price}}</text>
           <text class="hotalcount">销量：{{item.count}}</text>
         </view>
-      </navigator>
     </view>
   </view>
   <!-- 分隔块 -->

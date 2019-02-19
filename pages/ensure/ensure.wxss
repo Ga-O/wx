@@ -1,0 +1,53 @@
+/* pages/ensure/ensure.wxss */
+.sertime,.serprice,.sum{
+  margin:0 auto;
+  display:flex;
+  height:60rpx;
+  line-height:60rpx;
+  font-size:14px;
+  padding:15rpx;
+  width:90%;
+  justify-content: space-between;
+  
+}
+.sertime,.serprice{
+  border-bottom:1px solid #ddd;
+}
+.choose{
+  width:100%;
+  
+}
+.choosedate{
+  width:1317rpx;
+  height:150rpx;
+  display:flex;
+  
+}
+.chooseview{
+  width:187rpx;
+  height:100%;
+  background-color:rgba(0,0,0,.2);
+  text-align:center;
+  line-height:150rpx;
+  border:1px solid #ddd;
+  border-right:0;
+  font-size:14px;
+}
+.viewactive{
+  background-color:rgba(0,0,0,.6);
+  color:#fff;
+}
+.choosetime{
+  width:180rpx;
+  height:150rpx;
+  text-align:center;
+  line-height:150rpx;
+  border:1px solid #0f0;
+  font-size:14px;
+  margin:20rpx;
+}
+.subbtn{
+  background:#ff6600;
+  margin-bottom:0;
+}
+

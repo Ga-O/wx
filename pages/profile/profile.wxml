@@ -10,8 +10,11 @@
         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       </block>
+      <button wx:if="{{hasUserInfo && canIUse}}" bindtap="handlelog"> 退出 </button>
     </view>
+    
   </view>
+  <!-- 菜单 -->
   <view class="cell">
     <view class="cell-item arrow">
       <view class="cell-left">
@@ -19,7 +22,7 @@
         我的地址
       </view>
     </view>
-    <view class="cell-item arrow">
+    <view class="cell-item arrow" bindtap="menuhandle">
       <view class="cell-left">
         <image class="c-img" src="/pages/img/icon/menu.png" lazy-load="true" mode="aspectFill"></image>
         我的订单
@@ -65,7 +68,7 @@
         联系我们
       </view>
       </view>
-      <view class="cell-item arrow">
+      <view class="cell-item arrow" bindtap="parthandle">
         <view class="cell-left">
         <image class="c-img" src="/pages/img/icon/part.png" lazy-load="true" mode="aspectFill"></image>
         加入我们

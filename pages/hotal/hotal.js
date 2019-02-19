@@ -1,6 +1,21 @@
 // pages/hotal/hotal.js
 const app=getApp();
 Page({
+  // 酒店跳转
+  hothandle: function (e) {
+    var hotalidx2 = e.currentTarget.dataset.hotalidx2;
+    //console.log(hotalidx2);
+    wx.showLoading({
+      title: '请求中',
+    });
+    setTimeout(function () {
+      wx.hideLoading();
+      wx.navigateTo({
+        url: '/pages/product/product?hotalidx2=' + hotalidx2,
+      })
+    }, 500)
+  },
+  // 页数加载
     loadMore:function(){
     //加载下一页数据
     //1:获取二个数值 pno pageSize
@@ -43,7 +58,7 @@ Page({
       }
     })*/
   },
-  hothandle:function(e){
+  hothandle1:function(e){
     var i=e.target.dataset.idx;
     this.setData({
       activeidx:i
@@ -87,8 +102,8 @@ Page({
       success: (res) => {
         this.setData({
           hotallist: res.data.hotallist,
-          hothouse: res.data.hotallist,
-          hothotal:res.data.hotallist
+          hothouse: res.data.hotallist.slice(0,2),
+          hothotal:res.data.hotallist.slice(2)
         })
       }
     })

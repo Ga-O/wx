@@ -5,11 +5,28 @@ const mapkey = '8b6ea7941bc0d70e82dae2ff5bdfb51f';
 Page({
   //导航栏跳转
   navhandle: function(e){
-   var hotalname = e.target.dataset.hname;
-    //console.log(e.target.dataset.hname);
+    var hotalname = e.currentTarget.dataset.hname;
+    var hotalidx1 = e.currentTarget.dataset.idx1;
+    //console.log(hotalname);
+    //console.log(hotalidx);
     wx.navigateTo({
-      url: '/pages/commend/commend?hotalname='+hotalname,
-    })
+    url: '/pages/commend/commend?hotalname='+hotalname+'&hotalidx1='+hotalidx1,
+   })
+  },
+  // 酒店跳转
+  hothandle:function(e){
+    var hotalidx2=e.currentTarget.dataset.hotalidx2;
+    //console.log(hotalidx2);
+    wx.showLoading({
+      title: '请求中',
+    });
+    setTimeout(function(){
+      wx.hideLoading();
+      wx.navigateTo({
+        url: '/pages/product/product?hotalidx2='+ hotalidx2,
+      })
+    },500)
+    
   },
   //定位
   getLocation:function (callback) {

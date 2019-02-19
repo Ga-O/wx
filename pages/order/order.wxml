@@ -1,0 +1,24 @@
+<!--pages/order/order.wxml-->
+<view>
+  <view class="menutop">
+    <view class="menuitem {{activeidx==index?'active':''}}" wx:for="{{orderlist}}" wx:key="index" catchtap='hothandle1' data-idx="{{index}}">{{item}}</view>
+  </view>
+  <view wx:if="{{app.globalData.userpid!=0}}" class="card" wx:for="{{list}}" wx:key="index">
+    <view class="carda">
+      <image src="{{item.child[0].img_url}}" class="cardaleft"></image>
+      <view class="cardamid">
+        <view>民宿：{{item.name}}</view>
+        <view>入住时间：{{userdate}}</view>
+      </view>
+      <view class="cardaright">
+        <view>￥{{item.price}}</view>
+        <view>{{userindex}}天</view>
+      </view>
+    </view>
+    <view class="cardb">共1件商品  合计：{{sum}}元</view>
+    <view class="cardc">
+      <button bindtap="cancel" data-cancelidx="{{index}}">取消订单</button>
+      <button bindtap="comfirm">确认付款</button>
+    </view>
+  </view>
+</view>

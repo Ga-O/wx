@@ -91,6 +91,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(options.aidx==2){
+      this.setData({
+        activeIndex: options.aidx,
+      })
+    }
     wx.request({
       //url:"http://192.168.31.11:3030/delslist",
       url:"http://127.0.0.1:3030/delslist",

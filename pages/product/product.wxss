@@ -1,0 +1,74 @@
+/* pages/product/product.wxss */
+/*轮播图*/
+.slider,.slider swiper,.slider image{
+  width:100%;
+  height:750rpx;
+}
+.product-del{
+  padding:20rpx;
+}
+#share{
+  width:80rpx;
+  height:120rpx;
+  padding:0;
+  background:#fff;
+  line-height:15px;
+  float:right;
+  border-radius:0;
+  border:none;
+}
+#share::after{
+  border:0;
+  display:none;
+}
+#share image{
+  height:70rpx;
+  width:60rpx;
+}
+#share text{
+  font-size:12px;
+  color:#696969;
+}
+.deview{
+  height:70rpx;
+  background:#f5f9fc;
+  text-align:center;
+  font-size:12px;
+  color:#bbb;
+  line-height:70rpx;
+}
+.pname{
+  font-size:15px;
+}
+.price{
+  color:#ff6600;
+  font-weight: bold;
+}
+.assess{
+  height:50rpx;
+}
+.order{
+  color:#696969;
+  font-size:12px;
+}
+.order text{
+  font-size:14px;
+  color:#000;
+}
+.bm_border{
+  font-size:14px;
+  border-bottom:1px solid #eee; 
+}
+.del{
+  font-size:15px;
+  
+}
+.all{
+  padding:10rpx 0;
+}
+.sub{
+  background-color:#ff6600;
+  border-radius:0;
+  color:#fff;
+}
+

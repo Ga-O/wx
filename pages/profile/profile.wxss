@@ -17,13 +17,14 @@ page{
   border-radius:50%;
   background:#fff;
   border:3px solid rgba(0,0,0,.3);
+  margin-left:100rpx;
 }
 .userinfo{
-  width:50%;
+  width:100%;
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-left:100rpx;
+  
 }
 .userinfo-nickname {
   color: #fff;

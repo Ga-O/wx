@@ -8,6 +8,6 @@
    </swiper>
    <text class="card-title">{{carditem.title}}</text>
    <text class="card-desc">{{carditem.details}}</text>
-</view>
-
+  </view>
+  
 </view>

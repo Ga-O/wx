@@ -35,6 +35,11 @@ App({
   },
   globalData: {
     userInfo: null,
-    city:"广州市"
+    city:"广州市",
+    userpid:0,
+    usersum :"",
+    userindex : "",
+    userdate:"",
+    userarr:[]
   }
 })

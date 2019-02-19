@@ -1,2 +1,22 @@
 <!--pages/commend/commend.wxml-->
-<text>pages/commend/commend.wxml</text>
+<view>
+  <view class="top-search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input class="" placeholder="请输入搜索内容" value="{{searchValue}}"/>
+    </view>
+    <view class='sousuo'>搜索</view>
+  </view>
+  <view>
+    <view class="rhotal">
+      <view class="hotallist" wx:for="{{hotallist}}" wx:key="index" bindtap='hothandle' data-hotalidx2="{{index}}">
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill"></image>
+        <text class="hotalname">{{item.name}}</text>
+        <view>
+          <text class="hotalprice">￥:{{item.price}}</text>
+          <text class="hotalcount">销量：{{item.count}}</text>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -7,7 +7,10 @@
     "pages/profile/profile",
     "pages/hotal/hotal",
     "pages/scence/scence",
-    "pages/commend/commend"
+    "pages/commend/commend",
+    "pages/order/order",
+    "pages/product/product",
+    "pages/ensure/ensure"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,1 +1,41 @@
 /* pages/commend/commend.wxss */
+/* 头部搜索栏 */
+.top-search{
+  background-color:#EFEFF4;
+  height:100rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_arr{
+  border:1px solid #d0d0d0;
+  width:70%;
+  height:60rpx;
+  background:#fff;
+  border-radius:10rpx;
+
+}
+.searchcion{
+  position:absolute;
+  margin-top:10rpx;
+  margin: 10rpx;
+}
+.search_arr input{
+  margin-left:60rpx;
+  font-size:15px;
+  border-radius:5rpx;
+  height:100%;
+}
+  
+.sousuo {
+  margin-left: 15rpx;
+  width: 15%;
+  line-height: 60rpx;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  background:#ccc;
+  font-size:14px;
+  color:#696969;
+  height:60rpx;
+}

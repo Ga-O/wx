@@ -1,6 +1,24 @@
 // pages/profile/profile.js
 const app=getApp()
 Page({
+  handlelog:function(){
+    app.globalData.userInfo=null
+    this.setData({
+      hasUserInfo:false,
+      userInfo:{}
+    })
+  },
+  parthandle:function(){
+    var aidx=2;
+    wx.navigateTo({
+      url: '/pages/wzdels/wzdels?aidx='+aidx,
+    })
+  },
+  menuhandle:function(){
+    wx.navigateTo({
+      url: '/pages/order/order',
+    })
+  },
   //事件处理函数
   getUserInfo: function (e) {
     //console.log(e)
